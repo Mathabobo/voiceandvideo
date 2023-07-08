@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "172077341628",
+    "project_id": "vvc9ja",
+    "storage_bucket": "vvc9ja.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:172077341628:android:4f17ed66d493ca0c7b29b9",
+        "android_client_info": {
+          "package_name": "com.example.videovoiceandchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "172077341628-ueuktefq63g2ocbhlqgj3ufbvi9n3nh2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIvZb0J4WUPHX3hDUCndTByp7JhN9t2CU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "172077341628-ueuktefq63g2ocbhlqgj3ufbvi9n3nh2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
