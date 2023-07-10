@@ -52,60 +52,69 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.deepOrangeAccent,
-      body: SingleChildScrollView(
-        child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Column(
-            children: [
-              const SizedBox(
-                height: 40,
-              ),
-              Image.asset('lib/images/rashford.jpg'),
-              const SizedBox(
-                height: 5,
-              ),
-              const Text('Akomas sorry i took so lonnnnnnnngggg'),
-              const SizedBox(
-                height: 20,
-              ),
-              TextField(
-                controller: _channelController,
-                decoration: InputDecoration(
-                    errorText:
-                        _validateError ? 'Channel name is mandatory' : null,
-                    border: const UnderlineInputBorder(
-                      borderSide: BorderSide(width: 1),
-                    ),
-                    hintText: 'Channel name'),
-              ),
-              RadioListTile(
-                title: const Text('Broadcaster'),
-                value: ClientRole.Broadcaster,
-                groupValue: _role,
-                onChanged: (ClientRole? value) {
-                  setState(() {
-                    _role = value;
-                  });
-                },
-              ),
-              RadioListTile(
-                title: const Text('Audience'),
-                value: ClientRole.Audience,
-                groupValue: _role,
-                onChanged: (ClientRole? value) {
-                  setState(() {
-                    _role = value;
-                  });
-                },
-              ),
-              ElevatedButton(
-                onPressed: onJoin,
-                style: ElevatedButton.styleFrom(
-                    minimumSize: const Size(double.infinity, 40)),
-                child: const Text('Join'),
-              )
-            ],
+      backgroundColor: Colors.white,
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Column(
+              children: [
+                const SizedBox(
+                  height: 5,
+                ),
+                Image.asset(
+                  'lib/images/visionpro.jpg',
+                  height: 135,
+                  width: 180,
+                ),
+                const SizedBox(
+                  height: 5,
+                ),
+                const SizedBox(
+                  height: 5,
+                ),
+                TextField(
+                  controller: _channelController,
+                  decoration: InputDecoration(
+                      errorText:
+                          _validateError ? 'Channel name is mandatory' : null,
+                      border: const UnderlineInputBorder(
+                        borderSide: BorderSide(width: 1),
+                      ),
+                      hintText: 'Enter Channel name'),
+                ),
+                RadioListTile(
+                  title: const Text('Broadcaster'),
+                  value: ClientRole.Broadcaster,
+                  groupValue: _role,
+                  onChanged: (ClientRole? value) {
+                    setState(() {
+                      _role = value;
+                    });
+                  },
+                ),
+                RadioListTile(
+                  title: const Text('Audience'),
+                  value: ClientRole.Audience,
+                  groupValue: _role,
+                  onChanged: (ClientRole? value) {
+                    setState(() {
+                      _role = value;
+                    });
+                  },
+                ),
+                ElevatedButton(
+                  onPressed: onJoin,
+                  style: ElevatedButton.styleFrom(
+                      foregroundColor: Colors.white,
+                      backgroundColor: Colors.deepPurple,
+                      minimumSize: const Size(double.infinity, 40)),
+                  child: Text(_role == ClientRole.Audience
+                      ? 'JOIN CALL'
+                      : 'START CALL'),
+                )
+              ],
+            ),
           ),
         ),
       ),
